@@ -36,5 +36,11 @@
     "material-ui",
     "final-form-material-ui",
     "adapter"
-  ]
+  ],
+  "homepage": "https://github.com/Deadly0/final-form-material-ui",
+  "bugs": "https://github.com/Deadly0/final-form-material-ui/issues",
+  "repository":{
+    "type" : "git",
+    "url" : "https://github.com/Deadly0/final-form-material-ui.git"
+  }
 }
