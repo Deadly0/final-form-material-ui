@@ -32,9 +32,7 @@ const config = {
 	],
 	resolve: {extensions: ['.js', '.jsx']},
 	externals: [
-		'@material-ui/core/TextField',
-		'@material-ui/core/Checkbox',
-		'@material-ui/core/Radio',
+		/^@material-ui/,
 		'react',
 	],
 };
