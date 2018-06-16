@@ -28,7 +28,8 @@
     "webpack-cli": "^3.0.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "keywords": [
     "react",
