@@ -1,4 +1,7 @@
-export {default as TextField} from './TextField';
-export {default as Checkbox} from './Checkbox';
-export {default as Radio} from './Radio';
-export {default as Select} from './Select';
+import TextField from './TextField';
+import Checkbox from './Checkbox';
+import Radio from './Radio';
+import Select from './Select';
+
+
+export {TextField, Checkbox, Radio, Select};
