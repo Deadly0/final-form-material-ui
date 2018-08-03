@@ -17,7 +17,7 @@ export default ({input: {name, value, onChange, ...restInput}, meta, label, form
 				name={name}
 				onChange={onChange}
 				inputProps={restInput}
-				value={value}
+       				value={(rest.multiple ? (!!value && value !== '') ? value : [] : value)}
 			/>
 
 			{showError &&
