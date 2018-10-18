@@ -3,7 +3,7 @@
 		"baseUrl": ".",
 		"outDir": "dist",
 		"module": "commonjs",
-		"target": "es6",
+		"target": "es5",
 		"lib": [
 			"es6",
 			"dom",
@@ -24,7 +24,6 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"experimentalDecorators": true,
-		"allowSyntheticDefaultImports": true,
 		"removeComments": true,
 		"strict": true
 	},

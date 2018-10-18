@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Radio from '@material-ui/core/Radio';
 import {FieldRenderProps} from 'react-final-form';
 
