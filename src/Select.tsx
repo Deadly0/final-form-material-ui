@@ -3,9 +3,22 @@ import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import {FormControlProps} from '@material-ui/core/FormControl';
+import {FieldRenderProps} from 'react-final-form';
 
 
-export default ({input: {name, value, onChange, ...restInput}, meta, label, formControlProps, ...rest}) => {
+interface FormHelperTextWrapperProps extends FieldRenderProps {
+	label: string,
+	formControlProps: FormControlProps,
+}
+
+const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
+    input: {name, value, onChange, ...restInput},
+    meta,
+	label,
+    formControlProps,
+    ...rest
+}) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
@@ -26,3 +39,5 @@ export default ({input: {name, value, onChange, ...restInput}, meta, label, form
 		</FormControl>
 	);
 };
+
+export default FormHelperTextWrapper;

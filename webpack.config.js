@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const config = {
-	entry: './src/index.js',
+module.exports = {
+	entry: './src/index.ts',
+	mode: 'production',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'final-form-material-ui.min.js',
@@ -12,11 +14,11 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
+				test: /\.tsx?$/,
 				use: [
 					{
-						loader: 'babel-loader',
-						options: {cacheDirectory: true},
+						loader: 'ts-loader',
+						// options: {transpileOnly: true},
 					},
 				],
 				include: [
@@ -28,13 +30,15 @@ const config = {
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-		})
+		}),
+		// new ForkTsCheckerWebpackPlugin({
+		// 	async: false,
+		// 	watch: './src',
+		// }),
 	],
-	resolve: {extensions: ['.js', '.jsx']},
+	resolve: {extensions: ['.ts', '.tsx']},
 	externals: [
 		/^@material-ui/,
 		'react',
 	],
 };
-
-module.exports = config;
