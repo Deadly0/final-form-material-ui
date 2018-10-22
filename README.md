@@ -9,7 +9,7 @@ with Final Form
 
 ### Available fields
 ```jsx
-import {TextField, Checkbox, Radio, Select} from 'final-form-material-ui';
+import {TextField, Checkbox, Radio, Select, Input} from 'final-form-material-ui';
 ```
 
 ##### TextField
@@ -25,6 +25,29 @@ import {TextField} from 'final-form-material-ui';
     label="Domain"
     margin="normal"
     fullWidth
+/>
+```
+
+##### Input
+```jsx
+import React from 'react';
+import {Field} from 'react-final-form';
+import {Input} from 'final-form-material-ui';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
+<Field
+	name="password"
+	component={Input}
+	className="input"
+	type="password"
+	placeholder="Password"
+	endAdornment={
+		<InputAdornment position="end">
+			<Link className="inputLink" to="/forgot">
+				Forgot password?
+			</Link>
+		</InputAdornment>
+	}
 />
 ```
 
