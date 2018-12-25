@@ -2,10 +2,7 @@
 [![NPM Version](https://img.shields.io/npm/v/final-form-material-ui.svg?style=flat-square)](https://www.npmjs.com/package/final-form-material-ui)
 [![NPM Downloads](https://img.shields.io/npm/dm/final-form-material-ui.svg?style=flat-square)](https://www.npmjs.com/package/final-form-material-ui)
 
-A set of wrapper components to facilitate using
-[`material-ui`](https://github.com/callemall/material-ui)
-with Final Form
-
+A set of wrapper components to facilitate using [Material-UI](https://github.com/mui-org/material-ui) with Final Form.
 
 ### Available fields
 ```jsx
