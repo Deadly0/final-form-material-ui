@@ -1,11 +1,16 @@
 import * as React from 'react';
-import {FieldRenderProps} from 'react-final-form';
-import Input from '@material-ui/core/Input';
+import { FieldRenderProps } from 'react-final-form';
+import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
+export type Props = FieldRenderProps<HTMLTextAreaElement | HTMLInputElement> &
+	InputProps;
 
-const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, value, ...restInput}, meta, ...rest}) => {
-	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
+const InputWrapper: React.SFC<Props> = ({ input, meta, ...rest }) => {
+	const { name, value, onChange, onBlur, onFocus } = input;
+	const showError =
+		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
+		meta.touched;
 
 	return (
 		<>
@@ -13,16 +18,16 @@ const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, valu
 				{...rest}
 				name={name}
 				error={showError}
-				inputProps={restInput}
+				inputProps={{ onBlur, onFocus }}
 				onChange={onChange}
 				value={value}
 			/>
 
-			{showError &&
+			{showError && (
 				<FormHelperText>
 					{meta.error || meta.submitError}
 				</FormHelperText>
-			}
+			)}
 		</>
 	);
 };
