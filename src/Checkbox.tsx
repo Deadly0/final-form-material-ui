@@ -11,7 +11,7 @@ const CheckboxWrapper: React.SFC<FieldRenderProps> = ({
 	<Checkbox
 		{...rest}
 		name={name}
-		inputProps={restInput}
+		InputProps={restInput}
 		onChange={onChange}
 		checked={checked}
 	/>
