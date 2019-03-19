@@ -13,7 +13,7 @@ const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, valu
 				{...rest}
 				name={name}
 				error={showError}
-				inputProps={restInput}
+				InputProps={restInput}
 				onChange={onChange}
 				value={value}
 			/>
