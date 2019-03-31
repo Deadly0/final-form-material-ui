@@ -62,7 +62,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 <Field
     name="city"
-    label="Select city"}
+    label="Select city"
     formControlProps={{className: 'my-class'}}
     component={Select}
 >
