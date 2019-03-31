@@ -29,7 +29,7 @@ const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
 				{...rest}
 				name={name}
 				onChange={onChange}
-				inputProps={restInput}
+				InputProps={restInput}
 				value={value}
 			/>
 

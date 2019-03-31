@@ -11,7 +11,7 @@ const RadioWrapper: React.SFC<FieldRenderProps> = ({
 	<Radio
 		{...rest}
 		name={name}
-		inputProps={restInput}
+		InputProps={restInput}
 		onChange={onChange}
 		checked={checked}
 		value={value}
