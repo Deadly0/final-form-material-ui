@@ -3,7 +3,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import {FieldRenderProps} from 'react-final-form';
 
 
-const CheckboxWrapper: React.SFC<FieldRenderProps> = ({
+const CheckboxWrapper: React.SFC<FieldRenderProps<any>> = ({
 	input: {checked, name, onChange, ...restInput},
 	meta,
 	...rest

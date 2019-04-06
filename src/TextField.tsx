@@ -3,7 +3,7 @@ import {FieldRenderProps} from 'react-final-form';
 import TextField from '@material-ui/core/TextField';
 
 
-const TextFieldWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, value, ...restInput}, meta, ...rest}) => {
+const TextFieldWrapper: React.SFC<FieldRenderProps<any>> = ({input: {name, onChange, value, ...restInput}, meta, ...rest}) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (

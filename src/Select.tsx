@@ -7,9 +7,9 @@ import {FormControlProps} from '@material-ui/core/FormControl';
 import {FieldRenderProps} from 'react-final-form';
 
 
-interface FormHelperTextWrapperProps extends FieldRenderProps {
-	label: string,
-	formControlProps: FormControlProps,
+interface FormHelperTextWrapperProps extends FieldRenderProps<any> {
+	label?: string,
+	formControlProps?: FormControlProps,
 }
 
 const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
