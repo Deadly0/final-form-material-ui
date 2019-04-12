@@ -4,12 +4,14 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import {FormControlProps} from '@material-ui/core/FormControl';
+import {InputLabelProps} from '@material-ui/core/InputLabel';
 import {FieldRenderProps} from 'react-final-form';
 
 
 interface FormHelperTextWrapperProps extends FieldRenderProps {
 	label: string,
 	formControlProps: FormControlProps,
+	inputLabelProps: InputLabelProps,
 }
 
 const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
@@ -17,13 +19,19 @@ const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
     meta,
 	label,
     formControlProps,
+    inputLabelProps,
     ...rest
 }) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
 		<FormControl {...formControlProps} error={showError}>
-			<InputLabel htmlFor={name}>{label}</InputLabel>
+			<InputLabel
+				htmlFor={name}
+				{...inputLabelProps}
+			>
+				{label}
+			</InputLabel>
 
 			<Select
 				{...rest}
