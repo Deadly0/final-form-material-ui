@@ -19,7 +19,7 @@ const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, valu
 			/>
 
 			{showError &&
-				<FormHelperText>
+				<FormHelperText error>
 					{meta.error || meta.submitError}
 				</FormHelperText>
 			}
