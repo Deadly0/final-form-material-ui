@@ -1,17 +1,18 @@
 import * as React from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
-import {FieldRenderProps} from 'react-final-form';
+import Checkbox, { CheckboxProps } from '@material-ui/core/Checkbox';
+import { FieldRenderProps } from 'react-final-form';
 
+export type Props = FieldRenderProps<HTMLInputElement, any> & CheckboxProps;
 
-const CheckboxWrapper: React.SFC<FieldRenderProps> = ({
-	input: {checked, name, onChange, ...restInput},
+const CheckboxWrapper: React.SFC<Props> = ({
+	input: { checked, name, onChange, onFocus, onBlur },
 	meta,
 	...rest
 }) => (
 	<Checkbox
 		{...rest}
 		name={name}
-		inputProps={restInput}
+		inputProps={{ onFocus, onBlur }}
 		onChange={onChange}
 		checked={checked}
 	/>
