@@ -2,7 +2,7 @@ import * as React from 'react';
 import Checkbox, { CheckboxProps } from '@material-ui/core/Checkbox';
 import { FieldRenderProps } from 'react-final-form';
 
-export type Props = FieldRenderProps<HTMLInputElement> & CheckboxProps;
+export type Props = FieldRenderProps<HTMLInputElement, any> & CheckboxProps;
 
 const CheckboxWrapper: React.SFC<Props> = ({
 	input: { checked, name, onChange, onFocus, onBlur },

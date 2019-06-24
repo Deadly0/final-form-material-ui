@@ -2,7 +2,7 @@ import * as React from 'react';
 import Radio, { RadioProps } from '@material-ui/core/Radio';
 import { FieldRenderProps } from 'react-final-form';
 
-export type Props = FieldRenderProps<HTMLInputElement> & RadioProps;
+export type Props = FieldRenderProps<HTMLInputElement, any> & RadioProps;
 
 const RadioWrapper: React.SFC<Props> = ({
 	input: { checked, value, name, onChange, onFocus, onBlur },

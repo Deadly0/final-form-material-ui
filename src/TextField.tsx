@@ -4,7 +4,7 @@ import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 
 export type Props = FieldRenderProps<
 	HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-> &
+, any> &
 	TextFieldProps;
 
 const TextFieldWrapper: React.SFC<Props> = ({

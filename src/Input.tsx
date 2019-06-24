@@ -3,7 +3,7 @@ import { FieldRenderProps } from 'react-final-form';
 import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-export type Props = FieldRenderProps<HTMLTextAreaElement | HTMLInputElement> &
+export type Props = FieldRenderProps<HTMLTextAreaElement | HTMLInputElement, any> &
 	InputProps;
 
 const InputWrapper: React.SFC<Props> = ({ input, meta, ...rest }) => {

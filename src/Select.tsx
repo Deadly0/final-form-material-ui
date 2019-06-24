@@ -8,7 +8,7 @@ import { FieldRenderProps } from 'react-final-form';
 
 export type Props = FieldRenderProps<
 	HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-> &
+, any> &
 	SelectProps & {
 		label: string;
 		formControlProps: FormControlProps;
