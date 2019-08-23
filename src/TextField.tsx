@@ -10,7 +10,7 @@ const TextFieldWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, 
 		<TextField
 			{...rest}
 			name={name}
-			helperText={showError ? meta.error || meta.submitError : undefined}
+			helperText={showError ? meta.error || meta.submitError : rest.helperText}
 			error={showError}
 			inputProps={restInput}
 			onChange={onChange}
