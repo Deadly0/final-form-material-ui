@@ -6,18 +6,17 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import {FormControlProps} from '@material-ui/core/FormControl';
 import {FieldRenderProps} from 'react-final-form';
 
-
 interface FormHelperTextWrapperProps extends FieldRenderProps {
 	label: string,
 	formControlProps: FormControlProps,
 }
 
 const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
-    input: {name, value, onChange, ...restInput},
-    meta,
+	input: {name, value, onChange, onBlur, onFocus, ...restInput},
+	meta,
 	label,
-    formControlProps,
-    ...rest
+	formControlProps,
+	...rest
 }) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
@@ -29,6 +28,8 @@ const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
 				{...rest}
 				name={name}
 				onChange={onChange}
+				onBlur={onBlur}
+				onFocus={onFocus}
 				inputProps={restInput}
 				value={value}
 			/>

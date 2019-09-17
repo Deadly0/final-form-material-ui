@@ -2,8 +2,11 @@ import * as React from 'react';
 import {FieldRenderProps} from 'react-final-form';
 import TextField from '@material-ui/core/TextField';
 
-
-const TextFieldWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, value, ...restInput}, meta, ...rest}) => {
+const TextFieldWrapper: React.SFC<FieldRenderProps> = ({
+	input: {name, onChange, onBlur, onFocus, value, ...restInput},
+	meta,
+	...rest
+}) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
@@ -14,6 +17,8 @@ const TextFieldWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, 
 			error={showError}
 			inputProps={restInput}
 			onChange={onChange}
+			onBlur={onBlur}
+			onFocus={onFocus}
 			value={value}
 		/>
 	);

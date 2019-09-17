@@ -4,7 +4,11 @@ import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
 
-const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, value, ...restInput}, meta, ...rest}) => {
+const InputWrapper: React.SFC<FieldRenderProps> = ({
+	input: {name, onChange, onBlur, onFocus, value, ...restInput},
+	meta,
+	...rest
+}) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
@@ -15,6 +19,8 @@ const InputWrapper: React.SFC<FieldRenderProps> = ({input: {name, onChange, valu
 				error={showError}
 				inputProps={restInput}
 				onChange={onChange}
+				onBlur={onBlur}
+				onFocus={onFocus}
 				value={value}
 			/>
 

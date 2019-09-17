@@ -4,7 +4,7 @@ import {FieldRenderProps} from 'react-final-form';
 
 
 const CheckboxWrapper: React.SFC<FieldRenderProps> = ({
-	input: {checked, name, onChange, ...restInput},
+	input: {checked, name, onChange, onBlur, onFocus, ...restInput},
 	meta,
 	...rest
 }) => (
@@ -13,6 +13,8 @@ const CheckboxWrapper: React.SFC<FieldRenderProps> = ({
 		name={name}
 		inputProps={restInput}
 		onChange={onChange}
+		onBlur={onBlur}
+		onFocus={onFocus}
 		checked={checked}
 	/>
 );

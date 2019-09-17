@@ -9,7 +9,7 @@
     "build": "webpack --display-modules"
   },
   "peerDependencies": {
-    "@material-ui/core": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "@material-ui/core": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
     "final-form": "^4.0.0",
     "react": "^15.0.0 || ^16.0.0",
     "react-final-form": "^3.0.0 || ^4.0.0"

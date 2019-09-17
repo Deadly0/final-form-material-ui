@@ -4,7 +4,7 @@ import {FieldRenderProps} from 'react-final-form';
 
 
 const RadioWrapper: React.SFC<FieldRenderProps> = ({
-	input: {checked, value, name, onChange, ...restInput},
+	input: {checked, value, name, onChange, onBlur, onFocus, ...restInput},
 	meta,
 	...rest
 }) => (
@@ -13,6 +13,8 @@ const RadioWrapper: React.SFC<FieldRenderProps> = ({
 		name={name}
 		inputProps={restInput}
 		onChange={onChange}
+		onBlur={onBlur}
+		onFocus={onFocus}
 		checked={checked}
 		value={value}
 	/>
