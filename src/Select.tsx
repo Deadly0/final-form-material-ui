@@ -23,7 +23,7 @@ const FormHelperTextWrapper: React.SFC<FormHelperTextWrapperProps> = ({
 
 	return (
 		<FormControl {...formControlProps} error={showError}>
-			<InputLabel htmlFor={name}>{label}</InputLabel>
+			{label && <InputLabel htmlFor={name}>{label}</InputLabel>}
 
 			<Select
 				{...rest}
